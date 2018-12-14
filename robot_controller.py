@@ -66,7 +66,7 @@ def get_distance(depth_frame, num_points, height):
     for j in range(num_points):
         start = j*pix_per_interval
         sum = 0
-        for y in range(height*pix_per_deg-4, height*pix_per_deg):
+        for y in range((40-height)*pix_per_deg-4, (40-height)*pix_per_deg):
            for k in range(start, start+4):
                sum +=depth_frame.get_distance(k, y)
         avg = sum/16
